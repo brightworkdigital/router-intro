@@ -12,20 +12,17 @@ import AuthContext from './store/auth-context';
 import { useState } from 'react';
 
 function App() {
-  const [user, setUser] = useState('dave');
 
   return (
-    <AuthContext.Provider value={user}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<NavBar />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/jokes" element={<JokesPage />} />
-            <Route path="/jokes/:jokeId" element={<JokeDetailPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </AuthContext.Provider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NavBar />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/jokes" element={<JokesPage />} />
+          <Route path="/jokes/:jokeId" element={<JokeDetailPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

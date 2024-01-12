@@ -5,7 +5,6 @@ import AuthContext from "../store/auth-context.js";
 
 function JokesPage() {
   const jokes = getJokes();
-  const user = useContext(AuthContext);
 
   return <>
     <h1>Jokes Page</h1>
@@ -14,9 +13,6 @@ function JokesPage() {
        return <li id={joke.jokeId}> <Link joke={joke} to={`/jokes/${joke.jokeId}`}>{joke.name}</Link> </li>
       })}
     </ul>
-      <div>
-        user: {user}
-      </div>
   </>;
 }
 
