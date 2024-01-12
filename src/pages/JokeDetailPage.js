@@ -5,7 +5,7 @@ import AuthContext from "../store/auth-context";
 
 const JokeDetailPage = (props) => {
     const params = useParams();
-    const userState = useContext(AuthContext);
+    const {user, setUser} = useContext(AuthContext);
 
     const jokes = getJokes();
     const joke = jokes.filter((j) => {
@@ -23,7 +23,7 @@ const JokeDetailPage = (props) => {
         <p>
         {joke[0].joke}
         </p>
-        <div>User: {userState[0]}</div>
+        <div>User: {user}</div>
     </>
 }
 

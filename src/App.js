@@ -12,10 +12,10 @@ import AuthContext from './store/auth-context';
 import { useState } from 'react';
 
 function App() {
-  const userState = useState("dave");
+  const [user, setUser] = useState("dave");
 
   return (
-    <AuthContext.Provider value={userState}>
+    <AuthContext.Provider value={{user, setUser}}>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<NavBar />}>
