@@ -9,7 +9,9 @@ function JokesPage() {
   return <>
     <h1>Jokes Page</h1>
     <ul>
-      <li>A joke</li>
+      {jokes.map((joke) => {
+        return <li key={joke.jokeId}><Link to={`/jokes/${joke.jokeId}`}>{joke.name}</Link> </li>
+      })}
     </ul>
   </>;
 }
