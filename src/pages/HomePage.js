@@ -5,9 +5,7 @@ function HomePage() {
     <p>
       Hyperlink using HTML "a" tag <a href="/jokes">jokes</a>
     </p>
-    <p>
-      Hyperlink using React Link component <Link to="/jokes">jokes</Link>
-    </p>
+    
   </>;
 }
 

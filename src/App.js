@@ -14,15 +14,7 @@ import { useState } from 'react';
 function App() {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<NavBar />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/jokes" element={<JokesPage />} />
-          <Route path="/jokes/:jokeId" element={<JokeDetailPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <h1>Hello Joke App</h1>
   );
 }
 
